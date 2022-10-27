@@ -1,0 +1,150 @@
+﻿@model IEnumerable<PBDE401.ViewModel.ThumbnailBoxViewModel>
+@using PBDE401.Utility
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout - Index.cshtml";
+}
+
+
+
+<!-- slid -->
+<div class="slid">
+    <div class="container">
+        <div class="col-md-3 col-sm-3 col-xs-6 slid_grid">
+            <div class="slid_text">
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='2000' data-delay='.5' data-increment="5">2000</div>
+                <p>Drugs</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 slid_grid slid_grid2">
+            <div class="slid_text">
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1500' data-delay='.5' data-increment="5">1500</div>
+                <p>Our Staff</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 slid_grid slid_grid3">
+            <div class="slid_text">
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0018' data-delay='.5' data-increment="1">0018</div>
+                <p>Branches</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 slid_grid slid_grid4">
+            <div class="slid_text">
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='2800' data-delay='.5' data-increment="10">2800</div>
+                <p>Clients</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //slid -->
+<!-- banner-bottom -->
+<div class="banner-bottom" id="banner-bottom">
+    <div class="container">
+        <h3 class="w3l-title">What is GamersMed Pharmacy?</h3>
+        <p class="title">GamersMed is an online medical cannabis dispensary, it offers cannabis medication in the country as prescriptions by the doctor and and also self-medication</p>
+        @*<div class="bottom-grids">
+            <div class="col-md-4 bttm-grids-info">
+                <h5>Lorem Ipsum simply random</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+            <div class="col-md-4 bttm-grids-info">
+                <h5>Simply random Lorem Ipsum </h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+            <div class="col-md-4 bttm-grids-info">
+                <h5>Ipsum Lorem simply random</h5>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>*@
+    </div>
+</div>
+<!-- //banner-bottom -->
+<!-- Testimonials -->
+<div class="testi agileits-w3layouts">
+    <div class="container">
+        <h3 class="w3l-title">Testimonials</h3>
+        @*<h3>Hear from our customers</h3>*@
+        <!-- banner-text Slider starts Here -->
+        <script src="~/Template/js/responsiveslides.min.js"></script>
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function () {
+                // Slideshow 3
+                $("#slider3").responsiveSlides({
+                    auto: true,
+                    pager: true,
+                    nav: false,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+            });
+        </script>
+        <!-- //End-slider-script -->
+        <div id="top" class="callbacks_container">
+            <ul class="rslides" id="slider3">
+                <li>
+                    <p>"When Rebecca was 10 years old she was diagnosed with Complex Regional Pain Syndrome, this condition comes from damage to the nervous system and causes extreme pain. Rebecca was forced into a walker or wheelchair from a young age, and when spinal cord stimulation and morphine didn’t work, she tried medical marijuana. Rebecca now needs no walking support, no morphine, and is an advocate of medical marijuana"</p>
+                    <h4>Rebecca </h4>
+                </li>
+                <li>
+                    <p>"The story of Charlotte Figgi is more well known than most. Charlotte was diagnosed with a rare form of epilepsy at a young age and at 5 she experienced close to 300 mal seizures per week. The condition was so bad the doctor put her in a medically induced coma. In the first week of trying cannabis oil, Charlotte had no seizures. The strain created for her has no psychoactive effects and was renamed “Charlotte’s Web“."</p>
+                    <h4>Charlotte</h4>
+                </li>
+                <li>
+                    <p>"Ashly was diagnosed with Acute Lymphoblastic Leukemia, a type of cancer that affects white blood cells which makes it harder to fight infections. Ashley was also prone to seizures and her family moved to cannabis oil to aid this. The oil proved effective and is still used by Ashley to this day."</p>
+                    <h4>Ashly</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //Testimonials -->
+<!-- Medications -->
+<div class="services" id="services">
+    <div class="row">
+        <h3 class="w3l-title">Our Medication</h3>
+        @foreach (var area in Model)
+        {
+            @Html.Partial("_ThumbnailAreaPartial", area)
+        }
+    </div>
+</div>
+<!-- //Medications -->
+<!-- services -->
+<div class="container">
+    <h3 class="w3l-title">Our Services</h3>
+    <p class="title">What we offer and what we do...</p>
+    <div class="service-agileinfo">
+        <div class="col-md-4 col-sm-4 srvc-wthreegrids">
+            <div class="srvc-img">
+                <i class="fa fa-user-md" aria-hidden="true"></i>
+            </div>
+            <h5>Consultations and Prescriptions</h5>
+            <p>See our doctors both online and offline for the best medical care for prescription medication.</p>
+        </div>
+        <div class="col-md-4 col-sm-4 srvc-wthreegrids">
+            <div class="srvc-img">
+                <i class="fa fa-medkit" aria-hidden="true"></i>
+            </div>
+            <h5>Self Medications</h5>
+            <p>Some of our items are approved for self medication and some are not. You can purchase these items in store given that you are 18 years or older (please bring your ID).</p>
+        </div>
+        <div class="col-md-4 col-sm-4 srvc-wthreegrids">
+            <div class="srvc-img">
+                <i class="fa fa-ambulance" aria-hidden="true"></i>
+            </div>
+            <h5>Medication Deliveries</h5>
+            <p>We deliver prescriprion medication around the country, this is to ensure that people under the age of 18 do not purchase for delivery.</p>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
