@@ -7,7 +7,7 @@ namespace PBDE401.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Email")] //Cannot change display name of this one but can change for password display name
         public string Email { get; set; }
     }
 
@@ -50,13 +50,13 @@ namespace PBDE401.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = " Enter Email")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Enter Password")]
         public string Password { get; set; }
 
         [Display(Name = "Remember me?")]
