@@ -50,13 +50,13 @@ namespace PBDE401.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = " Enter Email")]
+        [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Enter Password")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [Display(Name = "Remember me?")]

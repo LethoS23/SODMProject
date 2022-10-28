@@ -22,7 +22,7 @@
     <link href="~/Template/css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="~/Template/css/component.css" rel="stylesheet" type="text/css" />
     <link href="~/Template/css/font-awesome.css" rel="stylesheet">
-    <link href="~/Template/LogIn_RegPages/css/style.css" rel="stylesheet" type='text/css' />
+    @*<link href="~/Template/LogIn_RegPages/css/style.css" rel="stylesheet" type='text/css' />*@
     <!-- font-awesome icons -->
     <!-- //Custom Theme files -->
     <!-- js -->
@@ -50,14 +50,14 @@
             <div class="w3ls-header">
                 <div class="container">
                     <div class="agile-logo">
-                        <h1><a href="index.html">GamersMed Pharamcy</a></h1>
+                        <h1><a href="/">GamersMed Pharamcy</a></h1>
                     </div>
                     <div class="top-nav">
 
                         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
                             <h3>Menu</h3>
                             @Html.ActionLink("Home", "Index", "Home")
-                            @Html.ActionLink("About Us", "About Us", "Home")
+                            @Html.ActionLink("About Us", "About", "Home")
                             @Html.ActionLink("Contact Us", "Contact", "Home")
                             @Html.ActionLink("Medications", "Medications", "Home")
                             <div class="navbar-collapse collapse">
@@ -120,7 +120,7 @@
 
         </div>
         <!-- ChatBot HTML -->
-    <button class="open-button" onclick="openForm()">Chat to Us!</button>
+    <!--<button class="open-button" onclick="openForm()">Chat to Us!</button>
 
     <div class="chat-popup" id="myForm">
         <form action="/action_page.php" class="chat-form-container">
@@ -129,7 +129,7 @@
 
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
-    </div>
+    </div>-->
     <!-- ChatBot HTML -->
         <!-- about -->
         <!-- footer -->
