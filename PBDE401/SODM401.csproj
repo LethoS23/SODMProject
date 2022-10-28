@@ -290,9 +290,11 @@
     <Content Include="Template\css\font-awesome.css" />
     <Content Include="Template\css\style.css" />
     <Content Include="Template\fonts\fontawesome-webfont.svg" />
-    <Content Include="Template\images\afrnurse.jpg" />
+    <Content Include="Template\images\afrmale.jpg" />
+    <Content Include="Template\images\asanurse.jpg" />
     <Content Include="Template\images\banner1.jpg" />
     <Content Include="Template\images\close.png" />
+    <Content Include="Template\images\femnurse.jpg" />
     <Content Include="Template\images\img1.jpg" />
     <Content Include="Template\images\img10.jpg" />
     <Content Include="Template\images\img11.jpg" />
@@ -308,6 +310,8 @@
     <Content Include="Template\images\img9.jpg" />
     <Content Include="Template\images\left.png" />
     <Content Include="Template\images\menu-icon.png" />
+    <Content Include="Template\images\narnurse.jpg" />
+    <Content Include="Template\images\noksnurse.jpg" />
     <Content Include="Template\images\right.png" />
     <Content Include="Template\images\slidr.jpg" />
     <Content Include="Template\js\bootstrap.js" />
