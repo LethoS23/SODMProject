@@ -234,9 +234,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202210281117533_Creation.cs" />
-    <Compile Include="Migrations\202210281117533_Creation.designer.cs">
-      <DependentUpon>202210281117533_Creation.cs</DependentUpon>
+    <Compile Include="Migrations\202210282101347_creation.cs" />
+    <Compile Include="Migrations\202210282101347_creation.designer.cs">
+      <DependentUpon>202210282101347_creation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -257,6 +257,10 @@
     <Compile Include="ViewModel\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-PBDE401-20220321014857.mdf" />
+    <Content Include="App_Data\aspnet-PBDE401-20220321014857_log.ldf">
+      <DependentUpon>aspnet-PBDE401-20220321014857.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -424,8 +428,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202210281117533_Creation.resx">
-      <DependentUpon>202210281117533_Creation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210282101347_creation.resx">
+      <DependentUpon>202210282101347_creation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
