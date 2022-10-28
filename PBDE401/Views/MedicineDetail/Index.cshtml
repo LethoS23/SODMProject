@@ -45,9 +45,9 @@
                     });
                 }
 
-                <div class="form-control" style="height:230px;">
-                    <div class="input-group" style="height:10px">
-                        <label>Price per month: &nbsp; </label>
+                <div class="form-control" style="height:235px;">
+                    <div class="input-group" style="height:12px">
+                        <label>Price Per Month: &nbsp;</label>
                         <label id="lblMSRP" style="font-weight:normal;">@(Model.Price.ToString("C"))</label>
                     </div>
                     <hr />
@@ -89,22 +89,24 @@
                     else
                     {
 
-                        <button type="submit" class="btn btn-danger" disabled="disabled">
-                            <span class="glyphicon glyphicon-level-up"></span>&nbsp;Log in to get a prescription
-                        </button>
+                        <p>
+                          &nbsp;Please log in to get a prescription
+                        </p>
                     }
                 </div>
 
             </div>
+            <br />
 
-            <h4 class="medicine-details-heading">Product Details</h4>
+
+            <h3>Product Details</h3>
 
             <dl>
                 <dt>
                     @Html.DisplayNameFor(m => m.MedicalNumber)
                 </dt>
                 <dd>
-                    &nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayFor(m => m.MedicalNumber)
+                    &nbsp;@Html.DisplayFor(m => m.MedicalNumber)
                 </dd>
             </dl>
             <dl>
@@ -112,7 +114,7 @@
                     @Html.DisplayNameFor(m => m.Quanity)
                 </dt>
                 <dd>
-                    &nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayFor(m => m.Quanity)
+                    &nbsp;@Html.DisplayFor(m => m.Quanity)
                 </dd>
             </dl>
             <dl>
@@ -120,7 +122,7 @@
                     @Html.DisplayNameFor(m => m.Category)
                 </dt>
                 <dd>
-                    &nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayFor(m => m.Category.Name)
+                    &nbsp;@Html.DisplayFor(m => m.Category.Name)
                 </dd>
             </dl>
             <dl>
@@ -128,7 +130,7 @@
                     @Html.DisplayNameFor(m => m.ExpiryDate)
                 </dt>
                 <dd>
-                    &nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayFor(m => m.ExpiryDate)
+                    &nbsp;@Html.DisplayFor(m => m.ExpiryDate)
                 </dd>
             </dl>
 
