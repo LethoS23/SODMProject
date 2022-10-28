@@ -47,6 +47,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.5.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.5.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocol.Extensions, Version=1.0.40306.1554, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocol.Extensions.1.0.4.403061554\lib\net45\Microsoft.IdentityModel.Protocol.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.5.5.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.5.5.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OpenIdConnect, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OpenIdConnect.4.0.1\lib\net45\Microsoft.Owin.Security.OpenIdConnect.dll</HintPath>
+    </Reference>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
@@ -62,6 +83,11 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.5.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -208,29 +234,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203210022076_AddCategoryAndMedicineToDB.cs" />
-    <Compile Include="Migrations\202203210022076_AddCategoryAndMedicineToDB.designer.cs">
-      <DependentUpon>202203210022076_AddCategoryAndMedicineToDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202203231258234_AddMemTypes.cs" />
-    <Compile Include="Migrations\202203231258234_AddMemTypes.designer.cs">
-      <DependentUpon>202203231258234_AddMemTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202203231302288_SeedMembershipTypes.cs" />
-    <Compile Include="Migrations\202203231302288_SeedMembershipTypes.designer.cs">
-      <DependentUpon>202203231302288_SeedMembershipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202203231734005_AddFieldsToUsers.cs" />
-    <Compile Include="Migrations\202203231734005_AddFieldsToUsers.designer.cs">
-      <DependentUpon>202203231734005_AddFieldsToUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202203232051044_AddSubcriptionToDb.cs" />
-    <Compile Include="Migrations\202203232051044_AddSubcriptionToDb.designer.cs">
-      <DependentUpon>202203232051044_AddSubcriptionToDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202203292214555_RemoveRequired.cs" />
-    <Compile Include="Migrations\202203292214555_RemoveRequired.designer.cs">
-      <DependentUpon>202203292214555_RemoveRequired.cs</DependentUpon>
+    <Compile Include="Migrations\202210281117533_Creation.cs" />
+    <Compile Include="Migrations\202210281117533_Creation.designer.cs">
+      <DependentUpon>202210281117533_Creation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -284,7 +290,6 @@
     <Content Include="Template\css\font-awesome.css" />
     <Content Include="Template\css\style.css" />
     <Content Include="Template\fonts\fontawesome-webfont.svg" />
-    <Content Include="Template\images\afrmnurse.jpg" />
     <Content Include="Template\images\afrnurse.jpg" />
     <Content Include="Template\images\banner1.jpg" />
     <Content Include="Template\images\close.png" />
@@ -395,7 +400,6 @@
     <Content Include="Views\Payment\Return.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
@@ -412,23 +416,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202203210022076_AddCategoryAndMedicineToDB.resx">
-      <DependentUpon>202203210022076_AddCategoryAndMedicineToDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231258234_AddMemTypes.resx">
-      <DependentUpon>202203231258234_AddMemTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231302288_SeedMembershipTypes.resx">
-      <DependentUpon>202203231302288_SeedMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231734005_AddFieldsToUsers.resx">
-      <DependentUpon>202203231734005_AddFieldsToUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203232051044_AddSubcriptionToDb.resx">
-      <DependentUpon>202203232051044_AddSubcriptionToDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203292214555_RemoveRequired.resx">
-      <DependentUpon>202203292214555_RemoveRequired.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210281117533_Creation.resx">
+      <DependentUpon>202210281117533_Creation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
