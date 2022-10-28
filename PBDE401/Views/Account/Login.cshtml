@@ -2,9 +2,12 @@
 @model LoginViewModel
 @{
     ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewBag.Title.</h2>
+<!--  particles  -->
+<div id="particles-js"></div>
+<!-- //particles -->
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">
@@ -52,10 +55,16 @@
         </section>
     </div>
     <div class="col-md-4">
-        
+
     </div>
 </div>
+
+<!-- scripts required  for particle effect -->
+<script src='~/Template/LogIn_RegPages/js/particles.min.js'></script>
+<script src="~/Template/LogIn_RegPages/js/index.js"></script>
+<!-- //scripts required for particle effect -->
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+

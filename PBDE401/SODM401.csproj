@@ -321,6 +321,10 @@
     <Content Include="Template\js\modernizr.custom.js" />
     <Content Include="Template\js\numscroller-1.0.js" />
     <Content Include="Template\js\responsiveslides.min.js" />
+    <Content Include="Template\LogIn_RegPages\css\style.css" />
+    <Content Include="Template\LogIn_RegPages\images\banner.jpg" />
+    <Content Include="Template\LogIn_RegPages\js\index.js" />
+    <Content Include="Template\LogIn_RegPages\js\particles.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
