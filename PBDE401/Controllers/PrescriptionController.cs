@@ -210,7 +210,7 @@ namespace PBDE401.Controllers
             // Sendemail
             var senderEmail = new MailAddress("gamersmedd@gmail.com", "Sharac Phone Repair Tech");
             var recieverMail = new MailAddress(userEmail, "Client");
-            var password = "hello123@B4";
+            var password = "nuwaxsjqkzmjgmmn";
             var sub = $"New Request #{id}";
             var body = message;
 
@@ -257,7 +257,7 @@ namespace PBDE401.Controllers
             // Sendemail
             var senderEmail = new MailAddress("gamersmedd@gmail.com", "GamersMed Pharmacy");
             var recieverMail = new MailAddress(userEmail, "Client");
-            var password = "hello123@B4";
+            var password = "nuwaxsjqkzmjgmmn";
             var sub = $"New Request #{id}";
             var body = message;
 
@@ -314,7 +314,7 @@ namespace PBDE401.Controllers
             // Sendemail
             var senderEmail = new MailAddress("gamersmedd@gmail.com", "GamersMed Pharmacy");
             var recieverMail = new MailAddress(userEmail, "Client");
-            var password = "hello123@B4";
+            var password = "nuwaxsjqkzmjgmmn";
             var sub = $"New Request #{id}";
             var body = message;
 
@@ -362,7 +362,7 @@ namespace PBDE401.Controllers
             // Sendemail
             var senderEmail = new MailAddress("gamersmedd@gmail.com", "GamersMed Pharmacy");
             var recieverMail = new MailAddress(userEmail, "Client");
-            var password = "hello123@B4";
+            var password = "nuwaxsjqkzmjgmmn";
             var sub = $"New Request #{id}";
             var body = message;
 
